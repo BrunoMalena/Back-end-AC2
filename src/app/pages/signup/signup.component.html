@@ -1,0 +1,31 @@
+<div class="body">
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <h1 class="text-center">Sign Up</h1>
+        <form [formGroup]="userForm" (ngSubmit)="onSubmit()" class="mt-4">
+          <div class="form-group">
+            <label for="user">Usuário:</label>
+            <input type="text" id="user" formControlName="user" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="text">E-mail:</label>
+            <input type="text" id="text" formControlName="email" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label for="password">Senha:</label>
+            <input type="password" id="password" formControlName="password" class="form-control" aria-describedby="passwordHelp" required>
+            <small id="passwordHelp" class="form-text text-muted">Senha deve ser entre 6 e 20 caracteres</small>
+          </div>
+          <div class="form-group">
+            <label for="confirmPassword">Confirmação de Senha:</label>
+            <input type="password" id="confirmPassword" formControlName="confirmPassword" class="form-control" required>
+          </div>
+          <div class="text-center mt-4">
+            <button type="submit" class="btn btn-primary btn-block">Sign Up</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
